@@ -20,6 +20,9 @@ db-sync
 # wp-content/themes/eindproject/node_modules
 # wp-content/themes/eindproject/bower_components
 
+#wp-config
+wp-config.php
+
 # PHPStorm
 .idea
 
