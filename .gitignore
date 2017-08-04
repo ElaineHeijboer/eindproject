@@ -1,0 +1,27 @@
+# Application
+wp-content/plugins/*
+wp-content/upgrade
+wp-content/uploads/*
+
+!wp-content/plugins/.gitkeep
+!wp-content/uploads/.gitkeep
+
+# Excel uploads
+/file
+
+# WP-CLI
+db-sync
+
+# Vendor (e.g. Composer)
+/vendor/*
+!/vendor/.gitkeep
+
+# Node Package Manager
+wp-content/themes/eindproject/node_modules
+wp-content/themes/eindproject/bower_components
+
+# Old versions
+_old/*
+
+# Other
+.DS_Store

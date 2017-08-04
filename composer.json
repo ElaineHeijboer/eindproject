@@ -1,0 +1,69 @@
+{
+  "name": "indicia/skeleton",
+  "type": "project",
+  "description": "Indicia WP Stack",
+  "homepage": "https://www.indicia.nl/interactiv",
+  "authors": [
+    {
+      "name": "Jeffrey Ponsen",
+      "email": "jeffrey.ponsen@indicia.nl"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "generate-salts": true,
+    "remove-default-content-dir": true,
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-0": {
+      "Interactiv\\Installer": "scripts"
+    },
+    "psr-4": {
+      "AWVN\\CAO\\": "web/app/plugins/awvn-caokijker/src"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Interactiv\\Installer::install"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "http://composer.indicia.nl"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": ">=4.7.2",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/soil": ">=3.4.0",
+    "indicia/advanced-custom-fields-pro": ">=5.2.7",
+    "indicia/wp-migrate-db-pro": ">=1.5",
+    "indicia/wp-migrate-db-pro-cli": ">=1.2",
+    "indicia/wp-migrate-db-pro-media-files": ">=1.3.2",
+    "wpackagist-plugin/wp-fail2ban": "^3.0",
+    "wpackagist-plugin/wordpress-seo": ">=2.2.1",
+    "wpackagist-plugin/google-analytics-for-wordpress": ">=5.4.2",
+    "wpackagist-plugin/nginx-helper": ">=1.9.8",
+    "indicia-wp/azure-authentication": "^1.0.0",
+    "PHPOffice/PHPExcel": "^1.8",
+    "wpackagist-plugin/menu-icons": "^0.10.2"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}
