@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Raleway:200,300,400,500,600,700');
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/foundation/scss/foundation.scss";
-@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
+//common
 @import "common/global";
+
+//components
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
+
+//layouts
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

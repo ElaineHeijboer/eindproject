@@ -33,7 +33,8 @@
     "wpackagist-plugin/wp-fail2ban": "^3.0",
     "wpackagist-plugin/wordpress-seo": ">=2.2.1",
     "wpackagist-plugin/google-analytics-for-wordpress": ">=5.4.2",
-    "wpackagist-plugin/menu-icons": "^0.10.2"
+    "wpackagist-plugin/menu-icons": "^0.10.2",
+    "wpackagist-plugin/contact-form-7": "^4.9"
   },
   "extra": {
     "installer-paths": {

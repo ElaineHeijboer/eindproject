@@ -19,7 +19,28 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+          this.mobiletoggle();
+          this.mainmenu();
       },
+        mobiletoggle: function() {
+            $( ".toggle" ).click(function() {
+                  $(".mainnav").slideToggle();
+                  $(".top-header").toggle();
+            });
+        },
+
+        mainmenu: function(){
+            $(window).resize(function() {
+              console.log($(window).width());
+                if ($(window).width() > 300) {
+                    $(".mainnav").css("display", "block");
+                    $(".top-header").css("display", "flex");
+                }else{
+                    $(".mainnav").css("display", "none");
+                    $(".top-header").css("display", "flex");
+                }
+            });
+        },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
       }

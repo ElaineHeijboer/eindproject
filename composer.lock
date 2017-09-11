@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "76140859c3c2eb36eea70745c94e45d5",
+    "content-hash": "826c490f760a430c6161bd05fa320691",
     "packages": [
         {
             "name": "composer/installers",
@@ -209,17 +209,37 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
-            "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "6.2.0",
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "4.9",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/6.2.0"
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/4.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.9.zip",
                 "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/google-analytics-for-wordpress",
+            "version": "6.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "reference": "tags/6.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.6.2.1.zip",
+                "reference": "tags/6.2.1",
                 "shasum": null
             },
             "require": {
@@ -239,7 +259,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/menu-icons.0.10.2.zip",
-                "reference": null,
+                "reference": "tags/0.10.2",
                 "shasum": null
             },
             "require": {
@@ -250,16 +270,16 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "5.1",
+            "version": "5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/5.1"
+                "reference": "tags/5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.1.zip",
-                "reference": null,
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.2.zip",
+                "reference": "tags/5.2",
                 "shasum": null
             },
             "require": {
@@ -279,7 +299,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-fail2ban.3.5.3.zip",
-                "reference": null,
+                "reference": "tags/3.5.3",
                 "shasum": null
             },
             "require": {

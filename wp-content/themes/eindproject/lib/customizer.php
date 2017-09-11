@@ -9,6 +9,20 @@ use Roots\Sage\Assets;
  */
 function customize_register($wp_customize) {
   $wp_customize->get_setting('blogname')->transport = 'postMessage';
+
+    //Add option for logo upload
+    $wp_customize->add_section('site_logo', array(
+        'title' => __('Logo', 'sage'),
+        'priority' => 30,
+        'description' => __('Upload a logo to replace the default site name and description in the header', 'sage')
+    ));
+    $wp_customize->add_setting('site_logo');
+
+    $wp_customize->add_control(new \WP_Customize_Image_Control($wp_customize, 'site_logo', array(
+        'label' => __('Logo', 'sage'),
+        'section' => 'title_tagline',
+        'settings' => 'site_logo',
+    )));
 }
 add_action('customize_register', __NAMESPACE__ . '\\customize_register');
 
