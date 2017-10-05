@@ -35,7 +35,8 @@ $root_rel_filters = apply_filters('soil/relative-url-filters', [
   'the_author_posts_link',
   'script_loader_src',
   'style_loader_src',
-  'theme_file_uri'
+  'theme_file_uri',
+  'parent_theme_file_uri',
 ]);
 Utils\add_filters($root_rel_filters, 'Roots\\Soil\\Utils\\root_relative_url');
 
@@ -49,9 +50,9 @@ add_filter('wp_calculate_image_srcset', function ($sources) {
 /**
  * Compatibility with The SEO Framework
  */
-add_filter('the_seo_framework_ogimage_output', function ($image) {
-  return home_url($image);
+add_action('the_seo_framework_do_before_output', function () {
+  remove_filter('wp_get_attachment_url', 'Roots\\Soil\\Utils\\root_relative_url');
 });
-add_filter('the_seo_framework_twitterimage_output', function ($image) {
-  return home_url($image);
+add_action('the_seo_framework_do_after_output', function () {
+  add_filter('wp_get_attachment_url', 'Roots\\Soil\\Utils\\root_relative_url');
 });

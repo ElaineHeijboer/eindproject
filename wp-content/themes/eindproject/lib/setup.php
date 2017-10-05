@@ -74,7 +74,7 @@ function widgets_init() {
     'after_title'   => '</h3>'
   ]);
 }
-add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
+//add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
 /**
  * Determine which pages should NOT display the sidebar
@@ -90,7 +90,7 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
   ]);
 
-  return apply_filters('sage/display_sidebar', $display);
+//  return apply_filters('sage/display_sidebar', $display);
 }
 
 /**

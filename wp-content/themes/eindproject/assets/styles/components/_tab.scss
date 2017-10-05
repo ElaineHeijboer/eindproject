@@ -1,6 +1,6 @@
 .tabs {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 40px;
   display: inline-block;
   .tab-links {
     padding: 0;
@@ -41,6 +41,10 @@
     padding: 15px;
     border:1px solid #D6D6D6;
     background-color: #EFEFEF;
+    height: 200px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .tab {
