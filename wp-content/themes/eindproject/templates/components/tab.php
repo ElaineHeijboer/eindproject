@@ -13,7 +13,7 @@ if (have_rows('tabs')):
         }
 
         $tab_title[] = '<li class="' . $active . '"><a href="#tab' . get_sub_field('tab_id') . '">' . get_sub_field('tab_title') . '</a></li>';
-        $tab_content[] = '<div id="#tab' . get_sub_field('tab_id') . '" class="tab ' . $active . '"><p>' . get_sub_field('tab_content') . '</p></div>';
+        $tab_content[] = '<div id="tab' . get_sub_field('tab_id') . '" class="tab ' . $active . '"><p>' . get_sub_field('tab_content') . '</p></div>';
 
     endwhile;
 
