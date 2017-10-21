@@ -503,7 +503,7 @@
                             "collapsed": "",
                             "min": 0,
                             "max": 0,
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "",
                             "sub_fields": [
                                 {
@@ -850,71 +850,14 @@
                             "layouts": {
                                 "59d22adc2dc90": {
                                     "key": "59d22adc2dc90",
-                                    "name": "card_1",
-                                    "label": "Card-1",
+                                    "name": "basic_card",
+                                    "label": "Basic card",
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_59d64f55f45c9",
-                                            "label": "label tekst",
-                                            "name": "label_text",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_59d64f55f45ca",
-                                            "label": "Optie#1",
-                                            "name": "optie_1",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_59d64f55f45cb",
-                                            "label": "Optie#2",
-                                            "name": "optie_2",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
                                             "key": "field_59d64f55f45cc",
-                                            "label": "Optie#3",
-                                            "name": "optie_3",
+                                            "label": "Card title",
+                                            "name": "title",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -929,6 +872,297 @@
                                             "prepend": "",
                                             "append": "",
                                             "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59d65e107b3c3",
+                                            "label": "Card content",
+                                            "name": "content",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_59d65e317b3c4",
+                                            "label": "URL",
+                                            "name": "url",
+                                            "type": "repeater",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "collapsed": "",
+                                            "min": 1,
+                                            "max": 4,
+                                            "layout": "table",
+                                            "button_label": "",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_59d65e4a7b3c5",
+                                                    "label": "Link text",
+                                                    "name": "link_text",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": ""
+                                                },
+                                                {
+                                                    "key": "field_59d65e567b3c6",
+                                                    "label": "Link",
+                                                    "name": "link",
+                                                    "type": "url",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": ""
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "59db566161a12": {
+                                    "key": "59db566161a12",
+                                    "name": "image_card",
+                                    "label": "Image card",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_59db566161a13",
+                                            "label": "Card title",
+                                            "name": "title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59db566161a14",
+                                            "label": "Card content",
+                                            "name": "content",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_59db568d61a18",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "59e0a977c4476": {
+                                    "key": "59e0a977c4476",
+                                    "name": "image-info_card",
+                                    "label": "Image info card",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_59e0a977c4477",
+                                            "label": "Card title",
+                                            "name": "title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59e0a977c4478",
+                                            "label": "Card content",
+                                            "name": "content",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_59e0a977c4479",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "59e0b5e9368b1": {
+                                    "key": "59e0b5e9368b1",
+                                    "name": "image-round_card",
+                                    "label": "Image round card",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_59e0b5e9368b2",
+                                            "label": "Card title",
+                                            "name": "title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_59e0b5e9368b3",
+                                            "label": "Card content",
+                                            "name": "content",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "new_lines": ""
+                                        },
+                                        {
+                                            "key": "field_59e0b5e9368b4",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
                                         }
                                     ],
                                     "min": "",
@@ -968,5 +1202,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1507217345
+    "modified": 1508582502
 }
