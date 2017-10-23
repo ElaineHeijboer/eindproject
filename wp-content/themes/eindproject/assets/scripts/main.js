@@ -22,6 +22,25 @@
             this.mobiletoggle();
             this.mainmenu();
             this.tab();
+            this.clipboard();
+        },
+
+        clipboard: function(){
+            var clipboard = new Clipboard('.btn');
+            $('[data-toggle="tooltip"]').tooltip({ trigger: 'click'});
+
+            clipboard.on('success', function(e) {
+                console.info('Action:', e.action);
+                console.info('Text:', e.text);
+                console.info('Trigger:', e.trigger);
+
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function(e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
         },
         mobiletoggle: function () {
             $(".toggle").click(function () {
@@ -48,7 +67,7 @@
                     var currentAttrValue = jQuery(this).attr('href');
 
                     // Show/Hide Tabs
-                    jQuery('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+                    jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
 
                     // Change/remove current tab to active
                     jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
