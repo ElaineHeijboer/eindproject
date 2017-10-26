@@ -5,7 +5,7 @@ $image_3 = get_sub_field('button_3_image');
 ?>
 
 <div class="row">
-    <div class="col-md-10 buttons-row">
+    <div class="col-sm-12 col-md-10 buttons-row">
         <div class="button-flat">
             <button type="button"><?= get_sub_field('button_1'); ?></button>
         </div>

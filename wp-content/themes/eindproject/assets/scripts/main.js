@@ -27,7 +27,7 @@
 
         clipboard: function(){
             var clipboard = new Clipboard('.btn');
-            $('[data-toggle="tooltip"]').tooltip({ trigger: 'click'});
+            $('[data-toggle="tooltip"]').tooltip({ trigger:"focus", delay:{hide:200}});
 
             clipboard.on('success', function(e) {
                 console.info('Action:', e.action);
@@ -45,7 +45,6 @@
         mobiletoggle: function () {
             $(".toggle").click(function () {
                 $(".mainnav").slideToggle();
-                $(".top-header").toggle();
             });
         },
 
@@ -54,9 +53,6 @@
                 console.log($(window).width());
                 if ($(window).width() > 300) {
                     $(".mainnav").css("display", "block");
-                    $(".top-header").css("display", "flex");
-                } else {
-                    $(".mainnav").css("display", "none");
                     $(".top-header").css("display", "flex");
                 }
             });
