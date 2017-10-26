@@ -39,12 +39,7 @@ function head_cleanup() {
   remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
   add_filter('use_default_gallery_style', '__return_false');
   add_filter('emoji_svg_url', '__return_false');
-
-  global $wp_widget_factory;
-
-  if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
-    remove_action('wp_head', [$wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style']);
-  }
+  add_filter('show_recent_comments_widget_style', '__return_false');
 }
 add_action('init', __NAMESPACE__ . '\\head_cleanup');
 
@@ -134,19 +129,6 @@ function embed_wrap($cache) {
   return '<div class="entry-content-asset">' . $cache . '</div>';
 }
 add_filter('embed_oembed_html', __NAMESPACE__ . '\\embed_wrap');
-
-/**
- * Remove unnecessary dashboard widgets
- *
- * @link http://www.deluxeblogtips.com/2011/01/remove-dashboard-widgets-in-wordpress.html
- */
-function remove_dashboard_widgets() {
-  remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
-  remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
-  remove_meta_box('dashboard_primary', 'dashboard', 'normal');
-  remove_meta_box('dashboard_secondary', 'dashboard', 'normal');
-}
-add_action('admin_init', __NAMESPACE__ . '\\remove_dashboard_widgets');
 
 /**
  * Remove unnecessary self-closing tags

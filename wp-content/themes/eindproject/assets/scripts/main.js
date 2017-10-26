@@ -17,28 +17,59 @@
   var Sage = {
     // All pages
     'common': {
-      init: function() {
-        // JavaScript to be fired on all pages
-          this.mobiletoggle();
-          this.mainmenu();
-      },
-        mobiletoggle: function() {
-            $( ".toggle" ).click(function() {
-                  $(".mainnav").slideToggle();
-                  $(".top-header").toggle();
+        init: function () {
+            // JavaScript to be fired on all pages
+            this.mobiletoggle();
+            this.mainmenu();
+            this.tab();
+            this.clipboard();
+        },
+
+        clipboard: function(){
+            var clipboard = new Clipboard('.btn');
+            $('[data-toggle="tooltip"]').tooltip({ trigger:"focus", delay:{hide:200}});
+
+            clipboard.on('success', function(e) {
+                console.info('Action:', e.action);
+                console.info('Text:', e.text);
+                console.info('Trigger:', e.trigger);
+
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function(e) {
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+            });
+        },
+        mobiletoggle: function () {
+            $(".toggle").click(function () {
+                $(".mainnav").slideToggle();
             });
         },
 
-        mainmenu: function(){
-            $(window).resize(function() {
-              console.log($(window).width());
+        mainmenu: function () {
+            $(window).resize(function () {
+                console.log($(window).width());
                 if ($(window).width() > 300) {
                     $(".mainnav").css("display", "block");
                     $(".top-header").css("display", "flex");
-                }else{
-                    $(".mainnav").css("display", "none");
-                    $(".top-header").css("display", "flex");
                 }
+            });
+        },
+        tab: function () {
+            jQuery(document).ready(function() {
+                jQuery('.tabs .tab-links a').on('click', function(e)  {
+                    var currentAttrValue = jQuery(this).attr('href');
+
+                    // Show/Hide Tabs
+                    jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+                    // Change/remove current tab to active
+                    jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+                    e.preventDefault();
+                });
             });
         },
       finalize: function() {
