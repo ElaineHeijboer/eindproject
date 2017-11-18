@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <form class="basic-input">
             <fieldset class="textarea__inputfield">
                 <textarea rows="4" type="text"></textarea>

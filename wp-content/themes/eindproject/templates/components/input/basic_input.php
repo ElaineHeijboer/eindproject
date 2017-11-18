@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <form class="basic-input">
             <fieldset class="basic-input__inputfield">
                 <input type="text" placeholder="<?= get_sub_field('placeholder'); ?>" autocomplete="off" required>

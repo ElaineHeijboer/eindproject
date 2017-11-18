@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <div class="text-columns">
             <?php if(get_sub_field( 'titel' )){ ?>
                 <h2><?= get_sub_field( 'titel' );?></h2>

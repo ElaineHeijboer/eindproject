@@ -21,15 +21,18 @@ get_template_part('templates/header');
 ?>
 <div class="offset">
     <?php get_template_part('templates/top-header'); ?>
-    <div class="wrap <?php if(is_front_page()){?>container-fluid"<?php }?> role="document">
-        <?php if(!is_front_page()){ ?>
-        <div class="content row">
-            <main class="main">
-                <div class="container padding-container"><?php } ?>
+    <div class="wrap container-fluid" role="document">
+        <?php if (is_front_page()){ ?>
             <?php include Wrapper\template_path(); ?>
-                    <?php if(!is_front_page()){ ?></div>
-                        </main><!-- /.main -->
-         </div><?php }?><!-- /.content-->
+        <?php } else { ?>
+            <div class="content">
+                <main class="main">
+                    <div class="container-fluid padding-container">
+                        <?php include Wrapper\template_path(); ?>
+                    </div>
+                </main><!-- /.main -->
+            </div>
+        <?php } ?>
 
     </div><!-- /.wrap -->
 </div>
