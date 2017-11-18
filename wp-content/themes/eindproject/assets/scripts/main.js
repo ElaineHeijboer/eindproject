@@ -23,6 +23,7 @@
             this.mainmenu();
             this.tab();
             this.clipboard();
+            this.customizer();
         },
         clipboard: function(){
             var clipboard = new Clipboard('.btn');
@@ -70,6 +71,63 @@
                     e.preventDefault();
                 });
             });
+        },
+        customizer: function (){
+            $("#customizer-bgcolor").change(function () {
+                var value = $(this).children(":selected").attr("id");
+                $('.button-flat__round button').css('background-color', value);
+                $('.button-flat button').css('background-color', value);
+                $('.button-flat__submit button').css('background-color', value);
+                $('.button-flat__submit-round button').css('background-color', value);
+            });
+            $("#customizer-font").change(function () {
+                var value = $(this).children(":selected").attr("id");
+                $('.button-flat__round button').css('font-family', value);
+                $('.button-flat button').css('font-family', value);
+                $('.button-flat__submit button').css('font-family', value);
+                $('.button-flat__submit-round button').css('font-family', value);
+            });
+            $("#customizer-textcolor").change(function () {
+                var value = $(this).children(":selected").attr("id");
+                $('.button-flat__round button').css('color', value);
+                $('.button-flat button').css('color', value);
+                $('.button-flat__submit button').css('color', value);
+                $('.button-flat__submit-round button').css('color', value);
+            });
+
+            // Function to preview image
+            $(function () {
+                $("#file").change(function () {
+                    $("#message").empty(); // To remove the previous error message
+                    var file = this.files[0];
+                    var imagefile = file.type;
+                    var match = ["image/jpeg", "image/png", "image/jpg", "xml/svg"];
+                    if (!((imagefile === match[0]) || (imagefile === match[1]) || (imagefile === match[2]))) {
+                        $('#previewing').attr('src', 'noimage.png');
+                        $("#message").html("<p id='error'>Please Select A valid Image File</p>" + "<h4>Note</h4>" + "<span id='error_message'>Only jpeg, jpg, png and svg Images type allowed</span>");
+                        return false;
+                    }
+                    else {
+                        var reader = new FileReader();
+                        reader.onload = imageIsLoaded;
+                        reader.readAsDataURL(this.files[0]);
+                    }
+                });
+            });
+            function imageIsLoaded(e) {
+                $("#file").css("color", "green");
+                $('#image_preview').css("display", "block");
+                $('#previewing').attr('src', e.target.result);
+                $('#previewing').attr('width', '250px');
+                $('#previewing').attr('height', '230px');
+                $('.button-flat__submit button img').attr('src', e.target.result);
+                $('.button-flat__submit button img').attr('width', '20px');
+                $('.button-flat__submit button img').attr('height', '20px');
+                $('.button-flat__submit-round button img').attr('src', e.target.result);
+                $('.button-flat__submit-round button img').attr('width', '20px');
+                $('.button-flat__submit-round button img').attr('height', '20px');
+            };
+
         },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
