@@ -1,5 +1,5 @@
 {
-  "name": "Eindproject",
+  "name": "Buzzyblock",
   "type": "project",
   "description": "Eindproject",
   "homepage": "http://77808.glr-imd.nl",
@@ -31,15 +31,14 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": ">=3.4.0",
     "wpackagist-plugin/wp-fail2ban": "^3.0",
-    "wpackagist-plugin/wordpress-seo": ">=2.2.1",
-    "wpackagist-plugin/google-analytics-for-wordpress": ">=5.4.2",
     "wpackagist-plugin/menu-icons": "^0.10.2",
-    "wpackagist-plugin/contact-form-7": "^4.9"
+    "johnpbloch/wordpress": "^4.8"
   },
   "extra": {
     "installer-paths": {
       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-    }
+    },
+    "wordpress-install-dir": "wp-admin"
   }
 }

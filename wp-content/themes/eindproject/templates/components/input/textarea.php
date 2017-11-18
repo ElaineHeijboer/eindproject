@@ -2,10 +2,10 @@
     <div class="col-md-10">
         <form class="basic-input">
             <fieldset class="textarea__inputfield">
-                <textarea type="text"></textarea>
+                <textarea rows="4" type="text"></textarea>
                 <hr>
                 <label><?= get_sub_field('label_text'); ?></label>
-</fieldset>
-</form>
-</div>
+            </fieldset>
+        </form>
+    </div>
 </div>

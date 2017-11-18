@@ -25,8 +25,7 @@ $image_3 = get_sub_field('button_3_image');
         </div>
 
         <div class="button-flat__submit">
-            <button type="button"><?= get_sub_field('button_3'); ?><img src="<?php echo $image_3['url']; ?>"
-                                                                        alt="<?php echo $image_3['alt']; ?>"/>
+            <button type="button"><?= get_sub_field('button_3'); ?><img src="<?php echo $image_3['url']; ?>" alt="<?php echo $image_3['alt']; ?>"/>
             </button>
         </div>
 

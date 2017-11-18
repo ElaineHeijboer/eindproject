@@ -24,7 +24,6 @@
             this.tab();
             this.clipboard();
         },
-
         clipboard: function(){
             var clipboard = new Clipboard('.btn');
             $('[data-toggle="tooltip"]').tooltip({ trigger:"focus", delay:{hide:200}});

@@ -1176,6 +1176,15 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5a0598dd6526a": {
+                    "key": "5a0598dd6526a",
+                    "name": "divider",
+                    "label": "divider",
+                    "display": "table",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -1202,5 +1211,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1508582502
+    "modified": 1510316278
 }
