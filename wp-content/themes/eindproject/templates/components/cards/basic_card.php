@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-10">
         <div class="basic-card">
             <div class="basic-card__card">
                 <h2 class="basic-card__title"><?= get_sub_field('title');?></h2>
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="basic-card shadow">
             <div class="basic-card__card">
                 <h2 class="basic-card__title"><?= get_sub_field('title');?></h2>

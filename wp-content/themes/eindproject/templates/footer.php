@@ -1,5 +1,3 @@
-<footer class="content-info">
-  <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
-  </div>
+<footer class="footer">
+    <p>© 2017 BuzzyBlocks, All rights reserved.</p>
 </footer>
