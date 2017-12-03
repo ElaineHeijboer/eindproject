@@ -73,7 +73,37 @@
                 });
             },
             customizer: function () {
-                $('#customizer-bg, #customizer-bgcolor').ColorPicker({
+               $('#customizer-bg').ColorPicker({
+                    color:'60bec4',
+
+                    onShow: function (colpkr) {
+                        $(colpkr).fadeIn(500);
+                        return false;
+                    },
+                    onHide: function (colpkr) {
+                        $(colpkr).fadeOut(500);
+                        return false;
+                    },
+                   onSubmit: function(hsb, hex, rgb, el) {
+                       $(el).val(hex);
+                       $(el).ColorPickerHide();
+                   },
+                   onBeforeShow: function () {
+                       $('#customizer-bg').ColorPickerSetColor(this.value);
+                       $('#customizer-bgcolor').ColorPickerSetColor(this.value);
+                   }
+                })
+                .bind('keyup', function(){
+                    $('#customizer-bg').ColorPickerSetColor(this.value);
+                    $('#customizer-bgcolor').ColorPickerSetColor(this.value);
+                    $('#customizer-bgcolor').css('backgroundColor', '#' + this.value);
+                    $('.button-flat__round button').css('backgroundColor', '#' + this.value);
+                    $('.button-flat button').css('backgroundColor', '#' + this.value);
+                    $('.button-flat__submit button').css('backgroundColor', '#' + this.value);
+                    $('.button-flat__submit-round button').css('backgroundColor', '#' + this.value);
+                });
+
+                $('#customizer-bgcolor').ColorPicker({
                     color:'60bec4',
 
                     onShow: function (colpkr) {
@@ -94,7 +124,36 @@
                     }
                 });
 
-                $('#customizer-text, #customizer-textcolor').ColorPicker({
+                $('#customizer-text').ColorPicker({
+                    color: 'ffffff',
+                    onShow: function (colpkr) {
+                        $(colpkr).fadeIn(500);
+                        return false;
+                    },
+                    onHide: function (colpkr) {
+                        $(colpkr).fadeOut(500);
+                        return false;
+                    },
+                    onSubmit: function(hsb, hex, rgb, el) {
+                        $(el).val(hex);
+                        $(el).ColorPickerHide();
+                    },
+                    onBeforeShow: function () {
+                        $('#customizer-text').ColorPickerSetColor(this.value);
+                        $('#customizer-textcolor').ColorPickerSetColor(this.value);
+                    }
+                })
+                .bind('keyup', function(){
+                    $('#customizer-text').ColorPickerSetColor(this.value);
+                    $('#customizer-textcolor').ColorPickerSetColor(this.value);
+                    $('#customizer-textcolor').css('backgroundColor', '#' +  this.value);
+                    $('.button-flat__round button').css('color', '#' + this.value);
+                    $('.button-flat button').css('color', '#' + this.value);
+                    $('.button-flat__submit button').css('color', '#' + this.value);
+                    $('.button-flat__submit-round button').css('color', '#' + this.value);
+                });
+
+                $('#customizer-textcolor').ColorPicker({
                     color: 'ffffff',
                     onShow: function (colpkr) {
                         $(colpkr).fadeIn(500);
@@ -123,7 +182,7 @@
                 });
                     // Function to preview image
 
-                    function imageIsLoaded(e) {
+                function imageIsLoaded(e) {
                         $('#loading').css("display", "none");
                         $("#file").css("color", "green");
                         $('#image_preview').css("display", "block");
