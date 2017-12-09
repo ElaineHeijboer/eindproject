@@ -1,0 +1,32 @@
+.contact-form {
+  margin-top: 30px !important;
+  font-family: $secondary-font!important;
+  font-weight:300!important;
+  .name_first, .name_last {
+    label {
+      display: none !important;
+    }
+  }
+  input, textarea{
+    background-color:#EFEFEF!important;
+    border:none!important;
+  }
+}
+
+.gform_footer {
+ input[type='submit'] {
+    padding: 10px 30px !important;
+    font-family: $main-font !important;
+    font-weight: 400 !important;
+    font-size: 19px !important;
+    color: white !important;
+    border: none !important;
+    background: $main-color !important;
+    &:hover {
+      background: #529e98 !important;
+    }
+    &:focus {
+      outline: none !important;
+    }
+  }
+}

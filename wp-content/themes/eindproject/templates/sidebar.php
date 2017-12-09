@@ -6,7 +6,7 @@
         <div class="customizer__color">
             <label>Kies de achtergrond kleur</label>
             <div id="customizer-bgcolor" style="background-color: #60bec4;"></div>
-            <input type="text" maxlength="6" size="6" id="customizer-bg" value="60bec4">
+            <input type="text" maxlength="7" size="7" id="customizer-bg" value="#60bec4">
         </div>
         <div class="customizer__color">
             <label>Kies de tekst kleur</label>
@@ -18,10 +18,14 @@
             <label>Kies een font</label>
             <select id="customizer-font">
                 <option id="" selected>Kies een font</option>
-                <option id="Georgia">Georgia</option>
-                <option id="Serif">Serif</option>
                 <option id="Arial">Arial</option>
+                <option id="Arial black">Arial Black</option>
+                <option id="Impact">Impact</option>
+                <option id="Lato">Lato</option>
+                <option id="Raleway">Raleway</option>
+                <option id="Tahoma">Tahoma</option>
                 <option id="Verdana">Verdana</option>
+                <option id="Serif">Serif</option>
             </select>
         </div>
         <form id="uploadimage" action="" method="post" enctype="multipart/form-data" style="width:100%;">
