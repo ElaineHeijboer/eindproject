@@ -11,7 +11,7 @@
         <div class="customizer__color">
             <label>Kies de tekst kleur</label>
             <div id="customizer-textcolor" style="color: #fff;"></div>
-            <input type="text" maxlength="6" size="6" id="customizer-text" value="ffffff">
+            <input type="text" maxlength="7" size="7" id="customizer-text" value="ffffff">
 
         </div>
         <div class="customizer__font">

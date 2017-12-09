@@ -73,6 +73,26 @@
                 });
             },
             customizer: function () {
+
+                function hexFormat (value){
+                    var include = value.includes('#');
+                    var nohash = value;
+                    var hash = value;
+                    var codes = [];
+
+                    if(include === true) {
+                        nohash = value.replace("#", "");
+                        hash = value;
+                    } else {
+                        nohash = value;
+                        hash = '#' + value;
+                    }
+
+                    codes = [nohash, hash];
+
+                    return codes;
+                }
+
                $('#customizer-bg').ColorPicker({
                     color:'60bec4',
 
@@ -89,18 +109,34 @@
                        $(el).ColorPickerHide();
                    },
                    onBeforeShow: function () {
-                       $('#customizer-bg').ColorPickerSetColor(this.value);
-                       $('#customizer-bgcolor').ColorPickerSetColor(this.value);
+                       //format[0] = nohex
+                       //format[1] = hex
+                       var format = hexFormat(this.value);
+
+                       $('#customizer-bg').ColorPickerSetColor(format[0]);
+                       $('#customizer-bgcolor').ColorPickerSetColor(format[0]);
+                   },
+                   onChange: function (hsb, hex, rgb) {
+                       $('#customizer-bgcolor').css('backgroundColor', '#' + hex);
+                       $('.button-flat__round button').css('backgroundColor', '#' + hex);
+                       $('.button-flat button').css('backgroundColor', '#' + hex);
+                       $('.button-flat__submit button').css('backgroundColor', '#' + hex);
+                       $('.button-flat__submit-round button').css('backgroundColor', '#' + hex);
+                       $("#customizer-bg").val('#' + hex);
                    }
                 })
                 .bind('keyup', function(){
-                    $('#customizer-bg').ColorPickerSetColor(this.value);
-                    $('#customizer-bgcolor').ColorPickerSetColor(this.value);
-                    $('#customizer-bgcolor').css('backgroundColor', '#' + this.value);
-                    $('.button-flat__round button').css('backgroundColor', '#' + this.value);
-                    $('.button-flat button').css('backgroundColor', '#' + this.value);
-                    $('.button-flat__submit button').css('backgroundColor', '#' + this.value);
-                    $('.button-flat__submit-round button').css('backgroundColor', '#' + this.value);
+                    //format[0] = nohex
+                    //format[1] = hex
+                    var format = hexFormat(this.value);
+
+                    $('#customizer-bg').ColorPickerSetColor(format[0]);
+                    $('#customizer-bgcolor').ColorPickerSetColor(format[0]);
+                    $('#customizer-bgcolor').css('backgroundColor', format[1]);
+                    $('.button-flat__round button').css('backgroundColor', format[1]);
+                    $('.button-flat button').css('backgroundColor', format[1]);
+                    $('.button-flat__submit button').css('backgroundColor', format[1]);
+                    $('.button-flat__submit-round button').css('backgroundColor', format[1]);
                 });
 
                 $('#customizer-bgcolor').ColorPicker({
@@ -139,18 +175,34 @@
                         $(el).ColorPickerHide();
                     },
                     onBeforeShow: function () {
-                        $('#customizer-text').ColorPickerSetColor(this.value);
-                        $('#customizer-textcolor').ColorPickerSetColor(this.value);
+                        //format[0] = nohex
+                        //format[1] = hex
+                        var format = hexFormat(this.value);
+
+                        $('#customizer-text').ColorPickerSetColor(format[0]);
+                        $('#customizer-textcolor').ColorPickerSetColor(format[0]);
+                    },
+                    onChange: function (hsb, hex, rgb) {
+                        $('#customizer-textcolor').css('backgroundColor', '#' + hex);
+                        $('.button-flat__round button').css('color', '#' + hex);
+                        $('.button-flat button').css('color', '#' + hex);
+                        $('.button-flat__submit button').css('color', '#' + hex);
+                        $('.button-flat__submit-round button').css('color', '#' + hex);
+                        $("#customizer-text").val('#' + hex);
                     }
                 })
                 .bind('keyup', function(){
-                    $('#customizer-text').ColorPickerSetColor(this.value);
-                    $('#customizer-textcolor').ColorPickerSetColor(this.value);
-                    $('#customizer-textcolor').css('backgroundColor', '#' +  this.value);
-                    $('.button-flat__round button').css('color', '#' + this.value);
-                    $('.button-flat button').css('color', '#' + this.value);
-                    $('.button-flat__submit button').css('color', '#' + this.value);
-                    $('.button-flat__submit-round button').css('color', '#' + this.value);
+                    //format[0] = nohex
+                    //format[1] = hex
+                    var format = hexFormat(this.value);
+
+                    $('#customizer-text').ColorPickerSetColor(format[0]);
+                    $('#customizer-textcolor').ColorPickerSetColor(format[0]);
+                    $('#customizer-textcolor').css('backgroundColor', format[1]);
+                    $('.button-flat__round button').css('color', format[1]);
+                    $('.button-flat button').css('color', format[1]);
+                    $('.button-flat__submit button').css('color',format[1]);
+                    $('.button-flat__submit-round button').css('color', format[1]);
                 });
 
                 $('#customizer-textcolor').ColorPicker({
@@ -209,6 +261,8 @@
                     $('#loading').css("display", "block");
                 }
 
+
+
                 $(function () {
                     $("#file").change(function () {
                         $("#message").empty(); // To remove the previous error message
@@ -229,6 +283,8 @@
                     });
                 });
                 //File Upload
+
+
             },
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
