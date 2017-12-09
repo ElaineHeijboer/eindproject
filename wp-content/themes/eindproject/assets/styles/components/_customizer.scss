@@ -34,4 +34,7 @@
       margin:0 0 12px 0;
     }
   }
+  @include media-breakpoint-down(sm) {
+    display:none;
+  }
 }

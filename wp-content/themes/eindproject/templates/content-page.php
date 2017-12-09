@@ -1,5 +1,5 @@
 <div class="row">
-<div class="<?php if (is_page('buttons')) { ?>col-md-9 <?php }else{ ?> col-md-10 <?php } ?>">
+<div class="<?php if (is_page('buttons')) { ?>col-md-9 <?php }else{ ?> col-md-12 <?php } ?>">
 <?php
 if( have_rows( 'component' ) ) {
     while( have_rows( 'component' ) ) : the_row();

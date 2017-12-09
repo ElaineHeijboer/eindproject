@@ -1,23 +1,22 @@
 <?php if (is_page('buttons')) { ?>
-    <script src="<?= get_template_directory_uri(); ?>/assets/scripts/colorpicker.js"></script>
     <div class="customizer">
         <h2>Customizer</h2>
         <hr>
         <div class="customizer__color">
-            <label>Kies de achtergrond kleur</label>
+            <label>Choose a background color</label>
             <div id="customizer-bgcolor" style="background-color: #60bec4;"></div>
             <input type="text" maxlength="7" size="7" id="customizer-bg" value="#60bec4">
         </div>
         <div class="customizer__color">
-            <label>Kies de tekst kleur</label>
+            <label>Choose a font color</label>
             <div id="customizer-textcolor" style="color: #fff;"></div>
-            <input type="text" maxlength="7" size="7" id="customizer-text" value="ffffff">
+            <input type="text" maxlength="7" size="7" id="customizer-text" value="#ffffff">
 
         </div>
         <div class="customizer__font">
-            <label>Kies een font</label>
+            <label>Choose a font</label>
             <select id="customizer-font">
-                <option id="" selected>Kies een font</option>
+                <option id="" selected>Choose a font</option>
                 <option id="Arial">Arial</option>
                 <option id="Arial black">Arial Black</option>
                 <option id="Impact">Impact</option>
@@ -36,7 +35,7 @@
             <div id="loading" style="display:none;">loading...</div>
             <hr>
             <div id="selectImage">
-                <label>Kies een button icoon</label><br/>
+                <label>Choose icon image</label><br/>
                 <input type="file" name="file" id="file" required/>
             </div>
         </form>

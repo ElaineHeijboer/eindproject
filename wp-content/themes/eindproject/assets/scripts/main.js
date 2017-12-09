@@ -24,6 +24,11 @@
                 this.tab();
                 this.clipboard();
                 this.customizer();
+                this.matchheight();
+            },
+            matchheight: function(){
+                    $('.basic-card').matchHeight();
+                    $('.basic-card__content').matchHeight();
             },
             clipboard: function () {
                 var clipboard = new Clipboard('.btn');
@@ -50,7 +55,6 @@
 
             mainmenu: function () {
                 $(window).resize(function () {
-                    console.log($(window).width());
                     if ($(window).width() > 300) {
                         $(".mainnav").css("display", "block");
                         $(".top-header").css("display", "flex");

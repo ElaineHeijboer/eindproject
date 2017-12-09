@@ -12,7 +12,7 @@
                        helps with your productivity without losing the quality or functionality. It leaves room for
                        the more complicated back-end work. And ofcourse there is a lot of space for your own
                        creativity and uniqueness.
-                   <div class="button-flat">
+                   <div class="button-flat button">
                        <a href="<?php echo home_url() . "/buttons"; ?>">Start here!</a>
                    </div>
                </div>

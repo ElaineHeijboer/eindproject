@@ -10,6 +10,8 @@
   input, textarea{
     background-color:#EFEFEF!important;
     border:none!important;
+    height:45px;
+    padding-left:5px; 
   }
 }
 
@@ -29,4 +31,19 @@
       outline: none !important;
     }
   }
+}
+
+.gform_wrapper div.validation_error{
+  border:none!important;
+  text-align:left!important;
+  font-weight:400!important;
+}
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+  border:none!important;
+  background-color:transparent!important;
+}
+
+.gform_wrapper li.gfield.gfield_error{
+  background-color:transparent!important;
 }

@@ -62,9 +62,10 @@
   @include media-breakpoint-down(xs) {
     flex-direction: column;
     height:auto;
-  }
-  &__image{
-    @include media-breakpoint-down(xs) {
+    &__info{
+      text-align: center;
+    }
+    &__image{
       height: 150px;
       width: 150px;
       flex: 1 0 auto;
@@ -74,13 +75,15 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 20px 0;
-    }
-    img{
-      height:100%;
-      @include media-breakpoint-down(xs) {
+      img{
         width: 100%;
         height:auto;
       }
+    }
+  }
+  &__image{
+    img{
+      height:100%;
     }
   }
   &__info{
@@ -88,20 +91,24 @@
     display:flex;
     justify-content:center;
     flex-direction:column;
-    text-align: center;
   }
 }
 
 .image-round-card{
   padding:15px 10px 15px 30px;
+  @include media-breakpoint-down(xs) {
+    padding:15px 10px;
+    &__info{
+      text-align: center;
+    }
+  }
   &__image{
     border-radius:50%;
     width:150px;
     height:150px;
     display: flex;
-    align-self: center;
   }
-  &_info{
+  &__info{
     padding:0;
   }
 }
