@@ -25,6 +25,12 @@
                 this.clipboard();
                 this.customizer();
                 this.matchheight();
+                this.floatinglabel();
+            },
+            floatinglabel:function(){
+                $('.textarea__label textarea, .basic-input__label input').on('focus blur', function (e) {
+                    $(this).parents('.textarea__label, .basic-input__label').toggleClass('is-focused', (e.type === 'focus' || this.value.length > 0));
+                }).trigger('blur');
             },
             matchheight: function(){
                     $('.basic-card').matchHeight();
@@ -47,17 +53,17 @@
                     console.error('Trigger:', e.trigger);
                 });
             },
+
             mobiletoggle: function () {
                 $(".toggle").click(function () {
-                    $(".mainnav").slideToggle();
+                    $(".mainnav").slideToggle(200);
                 });
             },
 
             mainmenu: function () {
                 $(window).resize(function () {
-                    if ($(window).width() > 300) {
+                    if ($(window).width() > 901) {
                         $(".mainnav").css("display", "block");
-                        $(".top-header").css("display", "flex");
                     }
                 });
             },
@@ -127,6 +133,10 @@
                        $('.button-flat__submit button').css('backgroundColor', '#' + hex);
                        $('.button-flat__submit-round button').css('backgroundColor', '#' + hex);
                        $("#customizer-bg").val('#' + hex);
+                       $('.button-raised button').css('backgroundColor', '#' + hex);
+                       $('.button-raised__round button').css('backgroundColor', '#' + hex);
+                       $('.button-raised__submit button').css('backgroundColor', '#' + hex);
+                       $('.button-raised__submit-round button').css('backgroundColor', '#' + hex);
                    }
                 })
                 .bind('keyup', function(){
@@ -141,6 +151,10 @@
                     $('.button-flat button').css('backgroundColor', format[1]);
                     $('.button-flat__submit button').css('backgroundColor', format[1]);
                     $('.button-flat__submit-round button').css('backgroundColor', format[1]);
+                    $('.button-raised button').css('backgroundColor', format[1]);
+                    $('.button-raised__round button').css('backgroundColor', format[1]);
+                    $('.button-raised__submit button').css('backgroundColor', format[1]);
+                    $('.button-raised__submit-round button').css('backgroundColor', format[1]);
                 });
 
                 $('#customizer-bgcolor').ColorPicker({
@@ -161,6 +175,10 @@
                         $('.button-flat__submit button').css('backgroundColor', '#' + hex);
                         $('.button-flat__submit-round button').css('backgroundColor', '#' + hex);
                         $("#customizer-bg").val('#' + hex);
+                        $('.button-raised button').css('backgroundColor', '#' + hex);
+                        $('.button-raised__round button').css('backgroundColor', '#' + hex);
+                        $('.button-raised__submit button').css('backgroundColor', '#' + hex);
+                        $('.button-raised__submit-round button').css('backgroundColor', '#' + hex);
                     }
                 });
 
@@ -192,6 +210,10 @@
                         $('.button-flat button').css('color', '#' + hex);
                         $('.button-flat__submit button').css('color', '#' + hex);
                         $('.button-flat__submit-round button').css('color', '#' + hex);
+                        $('.button-raised__round button').css('color', '#' + hex);
+                        $('.button-raised button').css('color', '#' + hex);
+                        $('.button-raised__submit button').css('color', '#' + hex);
+                        $('.button-raised__submit-round button').css('color', '#' + hex);
                         $("#customizer-text").val('#' + hex);
                     }
                 })
@@ -207,6 +229,10 @@
                     $('.button-flat button').css('color', format[1]);
                     $('.button-flat__submit button').css('color',format[1]);
                     $('.button-flat__submit-round button').css('color', format[1]);
+                    $('.button-raised__round button').css('color', format[1]);
+                    $('.button-raised button').css('color', format[1]);
+                    $('.button-raised__submit button').css('color',format[1]);
+                    $('.button-raised__submit-round button').css('color', format[1]);
                 });
 
                 $('#customizer-textcolor').ColorPicker({
@@ -226,6 +252,10 @@
                         $('.button-flat__submit button').css('color', '#' + hex);
                         $('.button-flat__submit-round button').css('color', '#' + hex);
                         $("#customizer-text").val('#' + hex);
+                        $('.button-raised__round button').css('color', '#' + hex);
+                        $('.button-raised button').css('color', '#' + hex);
+                        $('.button-raised__submit button').css('color', '#' + hex);
+                        $('.button-raised__submit-round button').css('color', '#' + hex);
                     }
                 });
 
@@ -235,6 +265,10 @@
                     $('.button-flat button').css('font-family', value);
                     $('.button-flat__submit button').css('font-family', value);
                     $('.button-flat__submit-round button').css('font-family', value);
+                    $('.button-raised__round button').css('font-family', value);
+                    $('.button-raised button').css('font-family', value);
+                    $('.button-raised__submit button').css('font-family', value);
+                    $('.button-raised__submit-round button').css('font-family', value);
                 });
                     // Function to preview image
 
@@ -259,6 +293,20 @@
                         $('.button-flat__submit-round button img').attr('src', e.target.result);
                         $('.button-flat__submit-round button img').attr('width', '20px');
                         $('.button-flat__submit-round button img').attr('height', '20px');
+
+                        $('.button-raised__round button img').attr('src', e.target.result);
+                        $('.button-raised__round button img').attr('width', '20px');
+                        $('.button-raised__round button img').attr('height', '20px');
+                        $('.button-raised__disabled-round button img').attr('src', e.target.result);
+                        $('.button-raised__disabled-round button img').attr('width', '20px');
+                        $('.button-raised__disabled-round button img').attr('height', '20px');
+
+                        $('.button-raised__submit button img').attr('src', e.target.result);
+                        $('.button-raised__submit button img').attr('width', '20px');
+                        $('.button-raised__submit button img').attr('height', '20px');
+                        $('.button-raised__submit-round button img').attr('src', e.target.result);
+                        $('.button-raised__submit-round button img').attr('width', '20px');
+                        $('.button-raised__submit-round button img').attr('height', '20px');
                     }
 
                 function imageIsLoading(e) {
@@ -275,7 +323,7 @@
                         var match = ["image/jpeg", "image/png", "image/jpg", "xml/svg"];
                         if (!((imagefile === match[0]) || (imagefile === match[1]) || (imagefile === match[2]))) {
                             $('#previewing').attr('src', 'noimage.png');
-                            $("#message").html("<p id='error'>Please Select A valid Image File</p>" + "<h4>Note</h4>" + "<span id='error_message'>Only jpeg, jpg, png and svg Images type allowed</span>");
+                            $("#message").html("<p id='error'>Please Select A valid Image File</p>" + "<h4>Note</h4>" + "<span id='error_message'>Only jpeg, jpg, png Images type allowed</span>");
                             return false;
                         }
                         else {

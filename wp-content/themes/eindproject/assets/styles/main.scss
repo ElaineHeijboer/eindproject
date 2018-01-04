@@ -8,6 +8,8 @@
 
 //common
 @import "common/global";
+@import "common/variables";
+@import "common/responsive";
 
 //components
 @import "components/buttons";
@@ -31,3 +33,4 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "layouts/404";
+@import "common/responsive";

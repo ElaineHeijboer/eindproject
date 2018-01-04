@@ -10,12 +10,7 @@
   height: auto;
   width: 300px;
   border-right: 1px $main-color solid;
-  @include media-breakpoint-down(sm) {
-    width: 100%;
-    z-index: 999;
-    display: none;
-    background-color: white;
-  }
+
 
   &__top {
     width: 100%;
@@ -26,25 +21,22 @@
     padding: 25px;
     align-items: center;
     justify-content: space-around;
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 0;
-    }
   }
+
   &__arrow {
-    width: 35px;
+    display: none;
+    width: 30px;
     height: auto;
     cursor: pointer;
     img {
-      width: 35px;
+      width: 30px;
       height: 30px;
       &:hover {
         opacity: 0.8;
       }
     }
-    @include media-breakpoint-up(sm) {
-      display: none;
-    }
   }
+
   &__logo {
     img {
       width: 150px;
@@ -52,14 +44,11 @@
       &:hover {
         opacity: 0.8;
       }
-      @include media-breakpoint-down(sm) {
-        width: 130px;
-      }
     }
   }
 
   &__social {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     height: 105px;
@@ -69,9 +58,6 @@
       &:hover {
         opacity: 0.8;
       }
-    }
-    @include media-breakpoint-up(sm) {
-      display: none;
     }
   }
   &__row {
@@ -98,12 +84,13 @@
         font-size: 18px;
       }
       li{
-        margin-left:0!important;
+        margin-left:0;
       }
     }
   }
   hr {
     border-color: $main-color;
+    margin-top: 1.1rem!important;
   }
 }
 
@@ -113,12 +100,6 @@
   padding: 30px;
   display: flex;
   top:0;
-  @include media-breakpoint-down(sm) {
-    padding: 0 30px;
-    position: fixed;
-    width: 100%;
-    z-index: 900;
-  }
 
   &__title {
     flex: 1 0 auto;
@@ -133,12 +114,10 @@
     width: 30px;
     align-self: center;
     cursor: pointer;
-    @include media-breakpoint-up(sm) {
-      display: none;
-    }
+    display: none;
   }
   &__social {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -149,9 +128,6 @@
       &:hover {
         opacity: 0.8;
       }
-    }
-    @include media-breakpoint-down(sm) {
-      display: none;
     }
   }
 }
@@ -192,19 +168,16 @@
       }
     }
   }
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
 }
 
 .search-mobile {
-  display: flex;
+  display: none;
   .menu-search {
     width: 100%;
     margin-bottom: 30px;
     .search {
       width: 100%;
-      padding: 10px 0 10px 60px;
+      padding: 15px 0 15px 60px;
       font-family: Raleway, sans-serif;
       font-size: 18px;
       font-weight: 400;
@@ -224,7 +197,7 @@
     button {
       width: 30px;
       position: absolute;
-      top: 162px;
+      top: 167px;
       opacity: 0.5;
       background: transparent;
       border: none;
@@ -232,8 +205,5 @@
         outline: none;
       }
     }
-  }
-  @include media-breakpoint-up(sm) {
-    display: none;
   }
 }

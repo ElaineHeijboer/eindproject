@@ -7,6 +7,7 @@
             <div id="customizer-bgcolor" style="background-color: #60bec4;"></div>
             <input type="text" maxlength="7" size="7" id="customizer-bg" value="#60bec4">
         </div>
+
         <div class="customizer__color">
             <label>Choose a font color</label>
             <div id="customizer-textcolor" style="color: #fff;"></div>

@@ -2,7 +2,7 @@
     <div class="home__start-info">
         <div class="container">
            <div class="row">
-               <div class="col-md-6 flex">
+               <div class="col-md-12 col-lg-6 flex">
                    <h1>
                        Buzzyblocks
                    </h1>
@@ -16,7 +16,7 @@
                        <a href="<?php echo home_url() . "/buttons"; ?>">Start here!</a>
                    </div>
                </div>
-               <div class="col-md-6">
+               <div class="col-md-12 col-lg-6 flex">
                    <img src="<?php echo bloginfo('template_directory') . '/assets/images/homeimage.png'; ?>">
                </div>
            </div>
