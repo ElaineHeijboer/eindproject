@@ -89,6 +89,7 @@
 }
 //disabled-input
 .disabled-input {
+  cursor:not-allowed;
   &__inputfield {
     position: relative;
     padding: 0;
