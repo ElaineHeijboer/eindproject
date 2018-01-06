@@ -37,10 +37,16 @@
     &::-moz-placeholder{
       transition: color 300ms ease;
     }
+    &:-ms-input-placeholder{
+      transition: color 300ms ease;
+    }
     &:not(:focus)::placeholder,  &:not(:focus)::-webkit-input-placeholder {
       color: transparent;
     }
     &:not(:focus)::-moz-placeholder{
+      color:transparent;
+    }
+    &:not(:focus):-ms-input-placeholder{
       color:transparent;
     }
   }
@@ -126,7 +132,7 @@
     margin-top:35px;
     box-sizing: border-box;
     width: 100%;
-    padding: 12px 0 10px 0;
+    padding: 12px 0 0 0;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -135,17 +141,31 @@
     outline: none;
     cursor: text;
     transition: 100ms;
+    vertical-align: top;
+
     &::placeholder, &::-webkit-input-placeholder {
       transition: color 300ms ease;
+      vertical-align: top;
     }
     &::-moz-placeholder{
       transition: color 300ms ease;
+      vertical-align: top;
+    }
+    &:-ms-input-placeholder{
+      transition: color 300ms ease;
+      vertical-align: top;
     }
     &:not(:focus)::placeholder,  &:not(:focus)::-webkit-input-placeholder {
       color: transparent;
+      vertical-align: top;
     }
     &:not(:focus)::-moz-placeholder{
       color:transparent;
+      vertical-align: top;
+    }
+    &:not(:focus):-ms-input-placeholder{
+      color:transparent;
+      vertical-align: top;
     }
 
   }
@@ -154,7 +174,7 @@
     content: '';
     display: block;
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     left: 0;
     margin: 0;
     padding: 0;

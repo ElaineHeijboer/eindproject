@@ -26,9 +26,14 @@
       }
     }
     .flex {
-      display: flex;
+      display: -webkit-box;
       justify-content: space-evenly;
       flex-direction: column;
+    }
+    @supports (display: flex) {
+      .flex  {
+        display: flex;
+      }
     }
 
     img {
@@ -38,6 +43,7 @@
       .button {
         margin-top: 20px;
       }
+
   }
   &__features {
     color: #4b4b4b;
