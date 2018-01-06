@@ -35,6 +35,9 @@
         display: flex;
       }
     }
+    .test {
+      
+    }
 
     img {
       width: 100%;
@@ -55,9 +58,14 @@
     display: flex;
     align-items: center;
     .flex {
-      display: flex;
+      display: -webkit-box;
       align-items: center;
       flex-direction: column;
+    }
+    @supports (display: flex) {
+      .flex  {
+        display: flex;
+      }
     }
     img {
       margin-bottom: 25px;
