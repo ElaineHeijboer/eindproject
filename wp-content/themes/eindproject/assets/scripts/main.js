@@ -128,15 +128,22 @@
                    },
                    onChange: function (hsb, hex, rgb) {
                        $('#customizer-bgcolor').css('backgroundColor', '#' + hex);
+                       $("#customizer-bg").val('#' + hex);
+
                        $('.button-flat__round button').css('backgroundColor', '#' + hex);
                        $('.button-flat button').css('backgroundColor', '#' + hex);
                        $('.button-flat__submit button').css('backgroundColor', '#' + hex);
                        $('.button-flat__submit-round button').css('backgroundColor', '#' + hex);
-                       $("#customizer-bg").val('#' + hex);
+
                        $('.button-raised button').css('backgroundColor', '#' + hex);
                        $('.button-raised__round button').css('backgroundColor', '#' + hex);
                        $('.button-raised__submit button').css('backgroundColor', '#' + hex);
                        $('.button-raised__submit-round button').css('backgroundColor', '#' + hex);
+
+                       $('.button-outline button').css('border-color', '#' + hex);
+                       $('.button-outline__round button').css('border-color', '#' + hex);
+                       $('.button-outline__submit button').css('border-color', '#' + hex);
+                       $('.button-outline__submit-round button').css('border-color', '#' + hex);
                    }
                 })
                 .bind('keyup', function(){
@@ -147,14 +154,21 @@
                     $('#customizer-bg').ColorPickerSetColor(format[0]);
                     $('#customizer-bgcolor').ColorPickerSetColor(format[0]);
                     $('#customizer-bgcolor').css('backgroundColor', format[1]);
+
                     $('.button-flat__round button').css('backgroundColor', format[1]);
                     $('.button-flat button').css('backgroundColor', format[1]);
                     $('.button-flat__submit button').css('backgroundColor', format[1]);
                     $('.button-flat__submit-round button').css('backgroundColor', format[1]);
+
                     $('.button-raised button').css('backgroundColor', format[1]);
                     $('.button-raised__round button').css('backgroundColor', format[1]);
                     $('.button-raised__submit button').css('backgroundColor', format[1]);
                     $('.button-raised__submit-round button').css('backgroundColor', format[1]);
+
+                    $('.button-outline button').css('border-color', format[1]);
+                    $('.button-outline__round button').css('border-color', format[1]);
+                    $('.button-outline__submit button').css('border-color', format[1]);
+                    $('.button-outline__submit-round button').css('border-color', format[1]);
                 });
 
                 $('#customizer-bgcolor').ColorPicker({
@@ -170,15 +184,22 @@
                     },
                     onChange: function (hsb, hex, rgb) {
                         $('#customizer-bgcolor').css('backgroundColor', '#' + hex);
+                        $("#customizer-bg").val('#' + hex);
+
                         $('.button-flat__round button').css('backgroundColor', '#' + hex);
                         $('.button-flat button').css('backgroundColor', '#' + hex);
                         $('.button-flat__submit button').css('backgroundColor', '#' + hex);
                         $('.button-flat__submit-round button').css('backgroundColor', '#' + hex);
-                        $("#customizer-bg").val('#' + hex);
+
                         $('.button-raised button').css('backgroundColor', '#' + hex);
                         $('.button-raised__round button').css('backgroundColor', '#' + hex);
                         $('.button-raised__submit button').css('backgroundColor', '#' + hex);
                         $('.button-raised__submit-round button').css('backgroundColor', '#' + hex);
+
+                        $('.button-outline button').css('border-color', '#' + hex);
+                        $('.button-outline__round button').css('border-color', '#' + hex);
+                        $('.button-outline__submit button').css('border-color', '#' + hex);
+                        $('.button-outline__submit-round button').css('border-color', '#' + hex);
                     }
                 });
 
@@ -206,15 +227,22 @@
                     },
                     onChange: function (hsb, hex, rgb) {
                         $('#customizer-textcolor').css('backgroundColor', '#' + hex);
-                        $('.button-flat__round button').css('color', '#' + hex);
+                        $("#customizer-text").val('#' + hex);
+
                         $('.button-flat button').css('color', '#' + hex);
+                        $('.button-flat__round button').css('color', '#' + hex);
                         $('.button-flat__submit button').css('color', '#' + hex);
                         $('.button-flat__submit-round button').css('color', '#' + hex);
-                        $('.button-raised__round button').css('color', '#' + hex);
+
                         $('.button-raised button').css('color', '#' + hex);
+                        $('.button-raised__round button').css('color', '#' + hex);
                         $('.button-raised__submit button').css('color', '#' + hex);
                         $('.button-raised__submit-round button').css('color', '#' + hex);
-                        $("#customizer-text").val('#' + hex);
+
+                        $('.button-outline button').css('color', '#' + hex);
+                        $('.button-outline__round button').css('color', '#' + hex);
+                        $('.button-outline__submit button').css('color', '#' + hex);
+                        $('.button-outline__submit-round button').css('color', '#' + hex);
                     }
                 })
                 .bind('keyup', function(){
@@ -225,14 +253,21 @@
                     $('#customizer-text').ColorPickerSetColor(format[0]);
                     $('#customizer-textcolor').ColorPickerSetColor(format[0]);
                     $('#customizer-textcolor').css('backgroundColor', format[1]);
-                    $('.button-flat__round button').css('color', format[1]);
+
                     $('.button-flat button').css('color', format[1]);
+                    $('.button-flat__round button').css('color', format[1]);
                     $('.button-flat__submit button').css('color',format[1]);
                     $('.button-flat__submit-round button').css('color', format[1]);
-                    $('.button-raised__round button').css('color', format[1]);
+
                     $('.button-raised button').css('color', format[1]);
+                    $('.button-raised__round button').css('color', format[1]);
                     $('.button-raised__submit button').css('color',format[1]);
                     $('.button-raised__submit-round button').css('color', format[1]);
+
+                    $('.button-outline button').css('color', format[1]);
+                    $('.button-outline__round button').css('color', format[1]);
+                    $('.button-outline__submit button').css('color', format[1]);
+                    $('.button-outline__submit-round button').css('color', format[1]);
                 });
 
                 $('#customizer-textcolor').ColorPicker({
@@ -247,28 +282,41 @@
                     },
                     onChange: function (hsb, hex, rgb) {
                         $('#customizer-textcolor').css('backgroundColor', '#' + hex);
-                        $('.button-flat__round button').css('color', '#' + hex);
+                        $("#customizer-text").val('#' + hex);
+
                         $('.button-flat button').css('color', '#' + hex);
+                        $('.button-flat__round button').css('color', '#' + hex);
                         $('.button-flat__submit button').css('color', '#' + hex);
                         $('.button-flat__submit-round button').css('color', '#' + hex);
-                        $("#customizer-text").val('#' + hex);
-                        $('.button-raised__round button').css('color', '#' + hex);
+
                         $('.button-raised button').css('color', '#' + hex);
+                        $('.button-raised__round button').css('color', '#' + hex);
                         $('.button-raised__submit button').css('color', '#' + hex);
                         $('.button-raised__submit-round button').css('color', '#' + hex);
+
+                        $('.button-outline button').css('color', '#' + hex);
+                        $('.button-outline__round button').css('color', '#' + hex);
+                        $('.button-outline__submit button').css('color', '#' + hex);
+                        $('.button-outline__submit-round button').css('color', '#' + hex);
                     }
                 });
 
                 $("#customizer-font").change(function () {
                     var value = $(this).children(":selected").attr("id");
-                    $('.button-flat__round button').css('font-family', value);
                     $('.button-flat button').css('font-family', value);
+                    $('.button-flat__round button').css('font-family', value);
                     $('.button-flat__submit button').css('font-family', value);
                     $('.button-flat__submit-round button').css('font-family', value);
-                    $('.button-raised__round button').css('font-family', value);
+
                     $('.button-raised button').css('font-family', value);
+                    $('.button-raised__round button').css('font-family', value);
                     $('.button-raised__submit button').css('font-family', value);
                     $('.button-raised__submit-round button').css('font-family', value);
+
+                    $('.button-outline button').css('font-family', value);
+                    $('.button-outline__round button').css('font-family', value);
+                    $('.button-outline__submit button').css('font-family', value);
+                    $('.button-outline__submit-round button').css('font-family', value);
                 });
                     // Function to preview image
 
@@ -312,8 +360,6 @@
                 function imageIsLoading(e) {
                     $('#loading').css("display", "block");
                 }
-
-
 
                 $(function () {
                     $("#file").change(function () {
