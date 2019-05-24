@@ -21,20 +21,24 @@ get_template_part('templates/header');
 ?>
 <div class="offset">
     <?php get_template_part('templates/top-header'); ?>
-    <div class="wrap container" role="document">
-        <div class="content row">
-            <main class="main">
-                <div class="container">
-                    <?php include Wrapper\template_path(); ?>
-                </div>
-            </main><!-- /.main -->
-        </div><!-- /.content -->
+    <div class="wrap container-fluid" role="document">
+        <?php if (is_front_page()){ ?>
+            <?php include Wrapper\template_path(); ?>
+        <?php } else { ?>
+            <div class="content">
+                <main class="main">
+                    <div class="container-fluid padding-container">
+                        <?php include Wrapper\template_path(); ?>
+                    </div>
+                </main><!-- /.main -->
+            </div>
+        <?php } ?>
     </div><!-- /.wrap -->
+    <?php get_template_part('templates/footer');?>
 </div>
 
 <?php
 do_action('get_footer');
-get_template_part('templates/footer');
 wp_footer();
 ?>
 </body>

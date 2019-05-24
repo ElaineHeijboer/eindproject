@@ -1,12 +1,32 @@
 .offset {
-  margin-left: 250px;
-  @include media-breakpoint-down(sm) {
-    margin-left:0;
-  }
+  margin-left: 300px;
 }
 
-.main{
-  @include media-breakpoint-down(sm) {
-    margin-top:95px;
+.padding-container{
+  padding:0 45px;
+}
+
+.search-page{
+  .basic-card{
+    margin-top:15px;
+  }
+  h2{
+    margin:20px 0;
+    font-weight:300;
+    font-size:28px;
+    color:$main-color;
+  }
+  h3{
+    font-weight:300;
+    font-size:24px;
+    color:$main-color;
+  }
+
+  a{
+    color:$main-color;
+  }
+  a:hover{
+    text-decoration: none;
+    color:$second-color;
   }
 }

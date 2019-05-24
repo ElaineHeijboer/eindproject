@@ -8,11 +8,16 @@
 
 //common
 @import "common/global";
+@import "common/variables";
+@import "common/responsive";
 
 //components
 @import "components/buttons";
 @import "components/comments";
+@import "components/customizer";
+@import "components/colorpicker";
 @import "components/forms";
+@import "components/front-page";
 @import "components/grid";
 @import "components/tab";
 @import "components/text-columns";
@@ -22,8 +27,10 @@
 //layouts
 @import "layouts/header";
 @import "layouts/sidebar";
+@import "layouts/contact";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
 @import "layouts/404";
+@import "common/responsive";

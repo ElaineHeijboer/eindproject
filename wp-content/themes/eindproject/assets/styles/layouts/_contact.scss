@@ -1,0 +1,52 @@
+.contact-form {
+  margin-top: 30px !important;
+  font-family: $secondary-font!important;
+  font-weight:300!important;
+  .name_first, .name_last {
+    label {
+      display: none !important;
+    }
+  }
+  input, textarea{
+    background-color:#EFEFEF!important;
+    border:none!important;
+    height:45px;
+    padding-left:5px; 
+  }
+}
+
+.gform_footer {
+ input[type='submit'] {
+    padding: 10px 30px !important;
+    font-family: $main-font !important;
+    font-weight: 400 !important;
+    font-size: 19px !important;
+    color: white !important;
+    border: none !important;
+    background: $main-color !important;
+    &:hover {
+      background: #529e98 !important;
+    }
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+
+.gform_wrapper div.validation_error{
+  border:none!important;
+  text-align:left!important;
+  font-weight:400!important;
+}
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+  border:none!important;
+  background-color:transparent!important;
+}
+
+.gform_wrapper li.gfield.gfield_error{
+  background-color:transparent!important;
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]){
+  line-height:1 !important;
+}

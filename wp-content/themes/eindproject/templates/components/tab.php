@@ -21,7 +21,7 @@ if (have_rows('tabs')):
 endif;
 ?>
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <div class="tabs">
             <ul class="tab-links">
                 <?php foreach ($tab_title as $title) {

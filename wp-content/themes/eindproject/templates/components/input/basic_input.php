@@ -1,11 +1,11 @@
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
         <form class="basic-input">
-            <fieldset class="basic-input__inputfield">
-                <input type="text" placeholder="<?= get_sub_field('placeholder'); ?>" autocomplete="off" required>
-                <hr>
+            <div id="label" class="basic-input__label">
                 <label><?= get_sub_field('label_text'); ?></label>
-            </fieldset>
+                <hr>
+                <input type="text" autocomplete="off" placeholder="<?= get_sub_field('placeholder'); ?>"></input>
+            </div>
         </form>
     </div>
 </div>

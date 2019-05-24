@@ -1,6 +1,6 @@
 .tabs {
+  margin:30px 0;
   width: 100%;
-  margin-top: 40px;
   display: inline-block;
   .tab-links {
     padding: 0;
@@ -17,6 +17,8 @@
     }
     a {
       padding: 2px 15px;
+      border: 1px $second-color solid;
+      border-bottom: 0;
       display: inline-block;
       background: $second-color;
       font-size: 16px;
@@ -24,7 +26,12 @@
       color: white;
       transition: all linear 0.2s;
       &:hover {
-        background: #529e98;
+        background: $main-color;
+        border: 1px $main-color solid;
+        border-bottom: 0;
+        text-decoration: none;
+      }
+      &:focus{
         text-decoration: none;
       }
     }

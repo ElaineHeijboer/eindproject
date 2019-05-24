@@ -1,9 +1,10 @@
-<article <?php post_class(); ?>>
-  <header>
-    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php if (get_post_type() === 'post') { get_template_part('templates/entry-meta'); } ?>
-  </header>
-  <div class="entry-summary">
-    <?php the_excerpt(); ?>
-  </div>
-</article>
+<div class="col-md-6">
+    <div class="basic-card shadow">
+        <div class="basic-card__card">
+            <a href="<?php the_permalink(); ?>"><h3 class="basic-card__title"><?php the_title(); ?></h3></a>
+            <p class="basic-card__content"><?= get_the_excerpt(); ?></p>
+            <hr>
+            <a href="<?php the_permalink(); ?>" class="basic-card__link">Go to: <?php the_title(); ?></a>
+        </div>
+    </div>
+</div>

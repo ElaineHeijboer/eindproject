@@ -1,6 +1,10 @@
 <div class="top-header">
     <div class="top-header__title">
-        <?php the_title(); ?>
+        <?php if ( is_search() ) {
+            echo 'Search';
+        } else {
+            the_title();
+        } ?>
     </div>
     <div class="top-header__menu toggle">
         <img src="<?php echo bloginfo('template_directory') . '/assets/images/dots-menu.svg'; ?>">

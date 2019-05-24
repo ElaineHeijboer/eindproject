@@ -5,13 +5,13 @@ $image_3 = get_sub_field('button_3_image');
 ?>
 
 <div class="row">
-    <div class="col-sm-12 col-md-10 buttons-row">
+    <div class="col-md-12 buttons-row">
         <div class="button-flat">
             <button type="button"><?= get_sub_field('button_1'); ?></button>
         </div>
 
         <div class="button-flat__round">
-            <button type="button"><img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>"/>
+            <button type="button"><img id="testing" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>"/>
             </button>
         </div>
 
@@ -25,8 +25,7 @@ $image_3 = get_sub_field('button_3_image');
         </div>
 
         <div class="button-flat__submit">
-            <button type="button"><?= get_sub_field('button_3'); ?><img src="<?php echo $image_3['url']; ?>"
-                                                                        alt="<?php echo $image_3['alt']; ?>"/>
+            <button type="button"><?= get_sub_field('button_3'); ?><img src="<?php echo $image_3['url']; ?>" alt="<?php echo $image_3['alt']; ?>"/>
             </button>
         </div>
 
